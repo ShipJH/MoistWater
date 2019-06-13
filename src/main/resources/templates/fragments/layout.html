@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head th:replace="fragments/commonCss :: commonCss"> </head>
+<head th:replace="fragments/commonJS :: commonJS"> </head>
+
+<body>
+	
+	<div th:replace="fragments/top :: top"></div>
+	
+		<div layout:fragment="content" class="content">
+		 <!-- 컨텐츠 부분 -->
+		</div>
+		
+	<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  	  layout:decorate="~{fragments/layout}" 
+  	  lang="ko" 
+  	  xmlns:th="http://www.thymeleaf.org">
+<th:block layout:fragment="custom_css">
+	<!-- custom -->
+</th:block>
+<th:block layout:fragment="custom_js">
+
+	<script type="text/javascript" >
+		var aa = 0;
+	</script>
+
+</th:block>
+<title>DLP Detail</title> 
+<body>
+<div layout:fragment="content">
+ 	<div style="border: orange 1px solid;">
+ 		커 언 텐 츠 영 역 ~
+ 	</div>
+</div>
+</body>
