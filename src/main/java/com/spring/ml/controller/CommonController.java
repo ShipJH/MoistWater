@@ -13,4 +13,12 @@ public class CommonController {
     		
     	return "views/test";
     }
+	
+	
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test2() {
+    		
+    	return "views/test2";
+    }
 }
