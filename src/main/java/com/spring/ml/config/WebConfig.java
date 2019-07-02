@@ -34,6 +34,7 @@ public class WebConfig implements WebMvcConfigurer{
 								.addPathPatterns("/**")
 								// .addPathPatterns("/**") //추가적인 패턴도 등록가능.
 								.excludePathPatterns("/test")
+								.excludePathPatterns("/views/errors/error")
 								.excludePathPatterns("/resources/**") // 추가적인 패턴적용가능.
 								;
 	}
