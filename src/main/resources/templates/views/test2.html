@@ -10,16 +10,45 @@
 
 	<script type="text/javascript" >
 		var aa = 0;
+		
+		function goChk(){
+			
+			var member = {
+					name : $('#name').val(),
+					email : $('#email').val(),
+					phoneNumber : $('#phoneNumber').val()
+			};
+			
+			$.ajax({
+				
+				url : "/validCheck",
+				method : "POST",
+				data: JSON.stringify(member),
+				contentType: "application/json; charset=utf-8",
+                success: function (response) {
+                    alert("성공");
+                }
+			});
+			
+		};
+		
+		
 	</script>
 
 </th:block>
-<title>MoistLife</title> 
+<title>vaildChk</title> 
 <body>
 <th:block layout:fragment="content">
 
-    zz
+    이름:<input type="text" id="name" name="name" />
+		</br>
+    이메일:<input type="text" id="email" name="email" />
+		</br>
+    폰번호<input type="text" id="phoneNumber" name="phoneNumber" />
+
+
+	<input type="button" value="전송" onclick="goChk();"/>
+<!-- 	validCheck -->
 
 </th:block>
-
-
 </body>
