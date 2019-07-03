@@ -4,11 +4,14 @@ import java.nio.charset.Charset;
 
 import javax.servlet.Filter;
 
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.filter.CharacterEncodingFilter;
+
+import com.navercorp.lucy.security.xss.servletfilter.XssEscapeServletFilter;
 
 @Configuration
 public class FilterConfig {
@@ -26,4 +29,14 @@ public class FilterConfig {
         return characterEncodingFilter;
     }
     
+    
+    @Bean
+    public FilterRegistrationBean<XssEscapeServletFilter> getFilterRegistrationBean(){
+        FilterRegistrationBean<XssEscapeServletFilter> registrationBean = new FilterRegistrationBean<XssEscapeServletFilter>();
+        registrationBean.setFilter(new XssEscapeServletFilter());
+        registrationBean.setOrder(1);
+        registrationBean.addUrlPatterns("/*");
+        return registrationBean;
+    }
+
 }
