@@ -37,8 +37,5 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
 		return "views/errors/error500";
 		
 	}
-	 
-	 
-
 
 }

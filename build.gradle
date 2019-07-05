@@ -35,4 +35,9 @@ dependencies {
 	
 	//XSS filter
 	compile('com.navercorp.lucy:lucy-xss-servlet:2.0.0')
+	
+	//aop setting
+	compile 'org.springframework:spring-aop:5.1.1.RELEASE'
+    compile 'org.springframework:spring-aspects:5.1.1.RELEASE'
+	
 }
